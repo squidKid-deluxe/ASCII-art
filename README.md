@@ -8,7 +8,7 @@ There are currently three ASCII generators,
 
 FIXME: the images dictionary must be edited manually to incorporate new images.
 
-NOTE:To edit the size of the printed image, raise or lower the number `image.height` (line 45) is being divided by. ***
+NOTE:To edit the size of the printed image, raise or lower the number `image.height` (line 45) is being divided by.
 
 To use the scripts, run them and enter the image you want to convert.
 
