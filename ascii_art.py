@@ -21,7 +21,7 @@ def main():
     value, value2 = 0, step
     x_pos, y_pos, z_pos = 0, 0, 0
     # open and resize the image
-    scale = image.width/600
+    scale = image.width/200
     image = image.resize((int(image.width / scale), int(image.height / scale)))
     image = image.resize((int(image.width / 1), int(image.height / 2.3)))
 
