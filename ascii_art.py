@@ -4,6 +4,8 @@ a module that creates ascii art from images
 
 # Import an image processing tool
 from PIL import Image
+from subprocess import call
+from time import sleep
 
 def main(file):
     """
@@ -42,5 +44,18 @@ def main(file):
         
 
 if __name__ == '__main__':
+    print("Get ready...")
+    sleep(2)
+    print("\033c")
+
     asci = main("python.jpg")
+
+    for _ in range(10):
+        call("xdotool key ctrl+minus".split())
+
     print(asci)
+    sleep(3.5)
+    print('\033c')
+    call("xdotool key ctrl+0".split())
+    print("\033cWow, Huh?")
+
