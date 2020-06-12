@@ -19,7 +19,7 @@ Dependencies:
 
 ascii_art.py:
 
-- colorize.py
+- None
 
 ascii_art_original.py:
 
