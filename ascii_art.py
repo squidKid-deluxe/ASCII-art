@@ -4,6 +4,7 @@ a module that creates ascii art from images
 
 # Import an image processing tool
 from PIL import Image
+from json import dumps, loads
 from subprocess import call
 from time import sleep
 
@@ -30,11 +31,11 @@ def main(file):
     while y_pos < image.height:
         # find its color
         color = image.getpixel((x_pos, y_pos))
-        # Add a colored character to the text
+        # Add a colored space to the text
         text += f"\033[48;2;{color[0]};{color[1]};{color[2]}m \033[0m"
         # next pixel same line
         x_pos += 1
-        # new line
+        # go to the next line if we have reached the end of a pixel row
         if x_pos == image.width - 1:
             text += '\n'
             y_pos += 1
@@ -58,4 +59,3 @@ if __name__ == '__main__':
     print('\033c')
     call("xdotool key ctrl+0".split())
     print("\033cWow, Huh?")
-
